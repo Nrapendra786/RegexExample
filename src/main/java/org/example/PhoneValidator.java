@@ -1,8 +1,6 @@
 package org.example;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PhoneValidator {
@@ -16,10 +14,6 @@ public class PhoneValidator {
 
     private static final String PHONE_REGEX_TYPE_FOUR = "\\(\\d{3}\\)-\\d{3}-\\d{4}";
 
-    //static Pattern object, since pattern is fixed
-    private static Pattern pattern;
-    //non-static Matcher object because it's created from the input String
-    private static Matcher matcher;
 
     private static boolean validatePhoneNumber(String phoneNumber) {
         var patZero = Pattern.compile(PHONE_REGEX_TYPE_ONE,Pattern.CASE_INSENSITIVE);
